@@ -1,0 +1,7 @@
+Package: opencl
+Version: v2024.05.08
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 27343f98a63e1048c1cc6bead97f33bef0dd27336ccf41da72b2432cc0a1211d
+Description: OpenCL SDK
