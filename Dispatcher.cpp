@@ -249,10 +249,10 @@ void Dispatcher::run()
 	m_countRunning = m_vDevices.size();
 
 	std::cout << std::endl;
-	std::cout << "Running..." << std::endl;
-	std::cout << "  Before using a generated vanigity address, always verify that it matches the printed private key." << std::endl;
+	std::cout << "开始执行..." << std::endl;
+	std::cout << "  用地址前，记得验证下打印出来的私钥。别傻逼逼的直接拿去用" << std::endl;
 	std::cout << "  Please make sure the program you are running is download from: https://github.com/GG4mida/profanity-tron" << std::endl;
-	std::cout << "  And always multi-sign the address to ensure account security. " << std::endl;
+	std::cout << "  切记多签！切记多签！切记多签！重要的说三遍" << std::endl;
 	std::cout << std::endl;
 
 	for (auto it = m_vDevices.begin(); it != m_vDevices.end(); ++it)
@@ -267,8 +267,8 @@ void Dispatcher::run()
 
 void Dispatcher::init()
 {
-	std::cout << "Initializing:" << std::endl;
-	std::cout << "  Should be no longer than 1 minute..." << std::endl;
+	std::cout << "初始化:" << std::endl;
+	std::cout << "  加载时间不应该超过1分钟..." << std::endl;
 
 	const auto deviceCount = m_vDevices.size();
 	m_sizeInitTotal = m_size * deviceCount;
@@ -596,7 +596,7 @@ void Dispatcher::printSpeed()
 		}
 
 		const std::string strVT100ClearLine = "\33[2K\r";
-		std::cerr << strVT100ClearLine << "Total: " << formatSpeed(speedTotal) << " -" << strGPUs << '\r' << std::flush;
+		std::cerr << strVT100ClearLine << "总速: " << formatSpeed(speedTotal) << " -" << strGPUs << '\r' << std::flush;
 		m_countPrint = 0;
 	}
 }

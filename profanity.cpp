@@ -271,7 +271,7 @@ int main(int argc, char **argv)
 				}
 			}
 
-			std::cout << "  GPU-" << i << ": " << strName << ", " << globalMemSize << " bytes available, " << computeUnits << " compute units (precompiled = " << (precompiled ? "yes" : "no") << ")" << std::endl;
+			std::cout << "  GPU-" << i << ": " << strName << ", 显存" << globalMemSize << " bytes available, " << computeUnits << "  计算单元  (当前正在使用预编译的kernel？" << (precompiled ? "yes" : "no") << ")" << std::endl;
 			vDevices.push_back(vFoundDevices[i]);
 			mDeviceIndex[vFoundDevices[i]] = i;
 		}
@@ -296,7 +296,7 @@ int main(int argc, char **argv)
 			// Create program from binaries
 			bUsedCache = true;
 
-			std::cout << "  Binary kernel loading..." << std::flush;
+			std::cout << "  加载Kernel ..." << std::flush;
 			const unsigned char **pKernels = new const unsigned char *[vDevices.size()];
 			for (size_t i = 0; i < vDeviceBinary.size(); ++i)
 			{
@@ -314,7 +314,7 @@ int main(int argc, char **argv)
 		else
 		{
 			// Create a program from the kernel source
-			std::cout << "  Kernel compiling ..." << std::flush;
+			std::cout << "  编译Kernel ..." << std::flush;
 
 			// const std::string strKeccak = readFile("keccak.cl");
 			// const std::string strSha256 = readFile("sha256.cl");
