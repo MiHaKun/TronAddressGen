@@ -1,6 +1,7 @@
 # TronAddressGen
 波场的靓号生成器。移植自：profanity。
 
+![image](https://github.com/user-attachments/assets/954ff206-c121-45ea-bdc1-813536402516)
 
 
 ## 做了啥
